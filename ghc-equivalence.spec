@@ -5,8 +5,8 @@
 %bcond_with tests
 
 Name:           ghc-%{pkg_name}
-Version:        0.2.5
-Release:        3%{?dist}
+Version:        0.3.1
+Release:        1%{?dist}
 Summary:        Maintaining an equivalence relation implemented as union-find using STT
 
 License:        BSD
@@ -19,6 +19,8 @@ BuildRequires:  ghc-rpm-macros
 BuildRequires:  ghc-STMonadTrans-devel
 BuildRequires:  ghc-containers-devel
 BuildRequires:  ghc-mtl-devel
+BuildRequires:  ghc-transformers-compat-devel
+BuildRequires:  ghc-transformers-devel
 %if %{with tests}
 BuildRequires:  ghc-QuickCheck-devel
 BuildRequires:  ghc-template-haskell-devel
@@ -58,6 +60,8 @@ This package provides the Haskell %{pkg_name} library development files.
 %install
 %ghc_lib_install
 
+rm %{buildroot}%{ghc_pkgdocdir}/LICENSE
+
 
 %check
 %if %{with tests}
@@ -74,13 +78,16 @@ This package provides the Haskell %{pkg_name} library development files.
 
 
 %files -f %{name}.files
-%doc LICENSE
+%license LICENSE
 
 
 %files devel -f %{name}-devel.files
 
 
 %changelog
+* Thu Jun 23 2016 Jens Petersen <petersen@redhat.com> - 0.3.1-1
+- update to 0.3.1
+
 * Wed Feb 03 2016 Fedora Release Engineering <releng@fedoraproject.org> - 0.2.5-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
 
