@@ -6,7 +6,7 @@
 
 Name:           ghc-%{pkg_name}
 Version:        0.3.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Maintaining an equivalence relation implemented as union-find using STT
 
 License:        BSD
@@ -81,6 +81,9 @@ This package provides the Haskell %{pkg_name} library development files.
 
 
 %changelog
+* Fri Feb 10 2017 Fedora Release Engineering <releng@fedoraproject.org> - 0.3.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
 * Thu Jun 23 2016 Jens Petersen <petersen@redhat.com> - 0.3.1-1
 - update to 0.3.1
 
