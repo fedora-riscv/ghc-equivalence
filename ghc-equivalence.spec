@@ -8,7 +8,7 @@
 
 Name:           ghc-%{pkg_name}
 Version:        0.3.2
-Release:        7%{?dist}
+Release:        8%{?dist}
 Summary:        Maintaining an equivalence relation implemented as union-find using STT
 
 License:        BSD
@@ -89,6 +89,9 @@ cp -p %{SOURCE1} %{pkg_name}.cabal
 
 
 %changelog
+* Thu Jan 31 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.3.2-8
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
+
 * Sat Jul 28 2018 Jens Petersen <petersen@redhat.com> - 0.3.2-7
 - revise .cabal
 
