@@ -7,15 +7,14 @@
 %bcond_with tests
 
 Name:           ghc-%{pkg_name}
-Version:        0.3.2
-Release:        9%{?dist}
+Version:        0.3.3
+Release:        1%{?dist}
 Summary:        Maintaining an equivalence relation implemented as union-find using STT
 
 License:        BSD
 Url:            https://hackage.haskell.org/package/%{pkg_name}
 # Begin cabal-rpm sources:
 Source0:        https://hackage.haskell.org/package/%{pkgver}/%{pkgver}.tar.gz
-Source1:        https://hackage.haskell.org/package/%{pkgver}/%{pkg_name}.cabal#/%{pkgver}.cabal
 # End cabal-rpm sources
 
 # Begin cabal-rpm deps:
@@ -60,7 +59,6 @@ This package provides the Haskell %{pkg_name} library development files.
 %prep
 # Begin cabal-rpm setup:
 %setup -q -n %{pkgver}
-cp -bp %{SOURCE1} %{pkg_name}.cabal
 # End cabal-rpm setup
 
 
@@ -99,6 +97,9 @@ cp -bp %{SOURCE1} %{pkg_name}.cabal
 
 
 %changelog
+* Thu Feb 21 2019 Jens Petersen <petersen@redhat.com> - 0.3.3-1
+- update to 0.3.3
+
 * Sun Feb 17 2019 Jens Petersen <petersen@redhat.com> - 0.3.2-9
 - refresh to cabal-rpm-0.13
 
