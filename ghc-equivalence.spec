@@ -8,7 +8,7 @@
 
 Name:           ghc-%{pkg_name}
 Version:        0.3.5
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Maintaining an equivalence relation implemented as union-find using STT
 
 License:        BSD
@@ -113,6 +113,9 @@ cabal-tweak-drop-dep 'build-depends: fail'
 
 
 %changelog
+* Fri Jul 17 2020 Jens Petersen <petersen@redhat.com> - 0.3.5-2
+- refresh to cabal-rpm-2.0.6
+
 * Fri Feb 14 2020 Jens Petersen <petersen@redhat.com> - 0.3.5-1
 - update to 0.3.5
 
