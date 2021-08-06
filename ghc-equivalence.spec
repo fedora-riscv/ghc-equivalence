@@ -8,7 +8,7 @@
 
 Name:           ghc-%{pkg_name}
 Version:        0.3.5
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Maintaining an equivalence relation implemented as union-find using STT
 
 License:        BSD
@@ -113,6 +113,9 @@ cabal-tweak-drop-dep 'build-depends: fail'
 
 
 %changelog
+* Fri Aug 06 2021 Jens Petersen <petersen@redhat.com> - 0.3.5-6
+- rebuild
+
 * Thu Jul 22 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.3.5-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
 
