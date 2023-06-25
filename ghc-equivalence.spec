@@ -12,7 +12,7 @@
 
 Name:           ghc-%{pkg_name}
 Version:        0.4.1
-Release:        %autorelease -e 0.riscv64
+Release:        %autorelease -e 0.riscv64 -e rvre0
 Summary:        Maintaining an equivalence relation implemented as union-find using STT
 
 License:        BSD-3-Clause
