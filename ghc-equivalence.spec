@@ -4,11 +4,15 @@
 %global pkg_name equivalence
 %global pkgver %{pkg_name}-%{version}
 
+%ifnarch riscv64
 %bcond_without tests
+%else
+%bcond_with tests
+%endif
 
 Name:           ghc-%{pkg_name}
 Version:        0.4.1
-Release:        %autorelease
+Release:        %autorelease -e 0.riscv64
 Summary:        Maintaining an equivalence relation implemented as union-find using STT
 
 License:        BSD-3-Clause
